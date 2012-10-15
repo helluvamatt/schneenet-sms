@@ -6,7 +6,7 @@
 </head>
 <body>
   <script>
-    var source = new EventSource('/events');
+    var source = new EventSource('/events?sessid=1');
     source.onmessage = function(e) {
       document.body.innerHTML += e.data + '<br>';
     };
