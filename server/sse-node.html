@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Test</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <script>
+    var source = new EventSource('/events');
+    source.onmessage = function(e) {
+      document.body.innerHTML += e.data + '<br>';
+    };
+  </script>
+</body>
+</html>
